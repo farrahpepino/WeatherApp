@@ -1,0 +1,232 @@
+body {
+  background-image: url(https://www.renderhub.com/raffyraffy/moon-lunar-landscape/moon-lunar-landscape-08.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5% 5%;
+}
+
+section {
+  font-family: Helvetica;
+  margin: 3% 22% 0% 22%;
+  border-radius: 24px;
+  padding: 3% 5% 2.5% 5%;
+  background-color: hsla(0, 0%, 50%, 0.5);
+  color: white;
+  border-style: solid;
+  border-color: hsla(0, 0%, 100%, 0.5);
+}
+
+footer {
+  text-align: center;
+  font-family: Helvetica;
+  color: white;
+}
+
+#current-city {
+  font-family: "Times New Roman", Times, serif;
+}
+
+#search-city-form {
+  text-align: center;
+}
+#search-city-input {
+  background-color: hsla(0, 0%, 100%, 0.5);
+  border: none;
+  font-size: 16px;
+  padding: 20px;
+  width: 75%;
+  border-radius: 16.8px;
+  transition-duration: 0.1s;
+}
+
+#submit-city {
+  margin-left: 5px;
+  font-size: 16px;
+  background-color: hsla(0, 0%, 50%, 0.5);
+  color: white;
+  border: none;
+  padding: 20px;
+  border-radius: 16.8px;
+}
+
+#submit-city:hover {
+  color: #e8f0fe;
+  background-color: hsla(0, 0%, 20%, 0.5);
+  transition-duration: 0.1s;
+}
+.current-weather {
+  padding: 5% 5% 0% 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.info {
+  font-size: 28px;
+  font-weight: lighter;
+}
+
+.current-temperature {
+  display: flex;
+  font-size: 45px;
+  padding-top: 5%;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#current-temperature-value {
+  padding-top: 6%;
+  font-size: 70px;
+}
+
+#current-temperature-unit {
+  padding-top: 9.5%;
+}
+
+#current-city {
+  font-size: 38px;
+}
+.current-details {
+  font-size: 16px;
+  color: grey;
+}
+
+.current-details strong {
+  color: red;
+}
+
+#forecast-weather {
+  padding: 2% 0% 0% 0%;
+}
+
+#forecast-weather ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 80px 50px 80px 50px;
+}
+
+#forecast-weather li {
+  text-align: center;
+  font-weight: lighter;
+  padding-left: 5%;
+  padding-right: 2.5%;
+}
+
+#forecast-weather li strong {
+  color: red;
+}
+
+#forecast-weather .next-day {
+  color: white;
+}
+
+@media (max-width: 950px) {
+  body {
+    background-color: black;
+    margin: 4% 5%;
+  }
+
+  section {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    margin: 3% 3% 0% 3%;
+    border-radius: 24px;
+    background-color: hsla(0, 0%, 50%, 0.5);
+    color: white;
+    border-style: solid;
+    padding: 5% 5% 0% 5%;
+  }
+
+  footer {
+    text-align: center;
+    padding-top: 0px;
+    margin-top: 0px;
+    font-weight: lighter;
+    font-family: Helvetica;
+    color: white;
+  }
+
+  #search-city-input {
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 20px;
+    width: 50%;
+    border-radius: 12.8px;
+  }
+
+  #submit-city {
+    margin-left: 5px;
+    font-size: 16px;
+    background-color: hsla(0, 0%, 50%, 0.5);
+    color: white;
+    border: none;
+    padding: 20px;
+    line-height: 1;
+    border-radius: 12.8px;
+  }
+
+  #submit-city:hover {
+    color: #e8f0fe;
+    background-color: hsla(0, 0%, 20%, 0.5);
+  }
+
+  .current-weather {
+    padding: 5% 5% 5% 5%;
+    display: block;
+    align-items: center;
+  }
+
+  .info {
+    font-size: 24px;
+  }
+
+  .current-temperature {
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+
+  #current-temperature-value {
+    font-size: 30px;
+  }
+
+  #current-temperature-unit {
+    padding-top: 5%;
+    font-size: 25px;
+  }
+
+  #current-city {
+    font-size: 30px;
+  }
+
+  .current-details {
+    font-size: 14px;
+    color: grey;
+  }
+
+  .current-details strong {
+    color: RED;
+  }
+
+  #forecast-weather ul {
+    display: flex;
+    flex-direction: column;
+    padding: 10% 10%;
+    border-style: none;
+  }
+
+  #forecast-weather li {
+    list-style-type: none;
+    padding-top: 8%;
+  }
+
+  #forecast-weather li strong {
+    color: red;
+  }
+}

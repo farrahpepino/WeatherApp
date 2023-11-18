@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIRE | Weather Today</title>
+    <link rel="stylesheet" href="/src/fire-weather-styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <section>
+      <header>
+        <form id="search-city-form">
+          <input
+            id="search-city-input"
+            type="search"
+            placeholder="Enter a city"
+            required
+          />
+          <input id="submit-city" type="submit" value="Search" />
+        </form>
+      </header>
+      <main>
+        <div class="current-weather">
+          <div class="info">
+            <h1 id="current-city">PARIS</h1>
+            <p class="current-details">
+              <span class="current-date-time"
+                ><text id="current-date">APR 19 2022</text> <br /><text
+                  id="current-day-time"
+                  >Saturday 15:32</text
+                ></span
+              >, <em id="current-condition">moderate rain</em> <br />
+              Humidity: <strong id="current-humidity">87%</strong>, Wind:
+              <strong id="current-wind">7.2 km/h</strong>
+            </p>
+          </div>
+          <div class="current-temperature">
+            <span id="current-temperature-value"><strong>24</strong></span
+            ><span id="current-temperature-unit">°C</span>
+          </div>
+        </div>
+        <div id="forecast-weather">
+          <ul>
+            <li>
+              <strong class="next-day" id="next-day-1">SUN</strong>
+              <br />
+              <strong>14°C</strong> 18°C
+            </li>
+            <li>
+              <strong class="next-day" id="next-day-2">MON</strong>
+              <br />
+              <strong>14°C</strong> 18°C
+            </li>
+            <li>
+              <strong class="next-day" id="next-day-3">TUE</strong>
+              <br />
+              <strong>14°C</strong> 18°C
+            </li>
+            <li>
+              <strong class="next-day" id="next-day-4">WED</strong>
+              <br />
+              <strong>14°C</strong> 18°C
+            </li>
+            <li>
+              <strong class="next-day" id="next-day-5">THU</strong>
+              <br />
+              <strong>14°C</strong> 18°C
+            </li>
+          </ul>
+        </div>
+      </main>
+    </section>
+    <footer>
+      <p>&copy FARRAH PEPINO 2023</p>
+    </footer>
+  </body>
+  <script src="/src/fire-weather.js"></script>
+</html>
