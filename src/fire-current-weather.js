@@ -80,7 +80,7 @@ function refreshWeather(response) {
   let fullYear = date.getFullYear();
   let hour = date.getHours();
   if (hour < 10) {
-    hour = `0${hours}`;
+    hour = `0${hour}`;
   }
   let minute = date.getMinutes();
 
