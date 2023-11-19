@@ -132,7 +132,7 @@ footer {
 @media (max-width: 1400px) {
   body {
     background-color: black;
-    margin: 4% 5%;
+    margin: 4% 3%;
   }
 
   section {
@@ -230,6 +230,7 @@ footer {
 
   .forecast-container {
     border: none;
-    margin-top: 1%;
+    margin-top: 0.5%;
+    margin-bottom: 10%;
   }
 }
