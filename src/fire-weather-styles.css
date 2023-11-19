@@ -128,7 +128,7 @@ footer {
 .weather-forecast-date {
   font-family: "Times New Roman", Times, serif;
 }
-@media (max-width: 1500px) {
+@media (max-width: 1400px) {
   body {
     background-color: black;
     margin: 4% 5%;
