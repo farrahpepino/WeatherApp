@@ -36,7 +36,7 @@ function displayForecast(response) {
     }
   });
 
-  let forecastElement = document.querySelector("#forecast-weather");
+  let forecastElement = document.querySelector("#forecast-container");
   forecastElement.innerHTML = forecastHtml;
 }
 
