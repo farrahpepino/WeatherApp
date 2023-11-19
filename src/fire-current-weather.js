@@ -3,14 +3,17 @@ function refreshWeather(response) {
     "#current-temperature-value"
   );
   let currentTemperature = response.data.temperature.current;
+
   let currentCityElement = document.querySelector("#current-city");
   currentCityElement.innerHTML = response.data.city.toUpperCase();
   currentTemperatureElement.innerHTML = Math.round(currentTemperature);
 
   let currentHumidityElement = document.querySelector("#current-humidity");
   currentHumidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+
   let currentWindElement = document.querySelector("#current-wind");
-  currentWindElement.innerHTML = `${response.data.wind.speed} km/h`;
+  currentWindElement.innerHTML = `${response.data.wind.speed} m/s`;
+
   let currentConditionElement = document.querySelector("#current-condition");
   currentConditionElement.innerHTML = response.data.condition.description;
 
@@ -51,8 +54,9 @@ function refreshWeather(response) {
     "Friday",
     "Saturday",
   ];
+
   let day = days[date.getDay()];
-  console.log(response);
+
   currentDateElement.innerHTML = `${month} ${noDate} ${fullYear}`;
   let currentDayTimeElement = document.querySelector("#current-day-time");
   currentDayTimeElement.innerHTML = `${day} ${hour}:${minute}`;
