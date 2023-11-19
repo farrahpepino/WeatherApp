@@ -7,16 +7,23 @@ function getForecast(city) {
 
 function displayForecast(response) {
   let forecastHtml = "";
-  console.log(response.data);
+  console.log(response.data.daily);
+  let index = 1;
   response.data.daily.forEach(function (day, index) {
-    if (index < 5) {
+    if ((index > 0) & (index < 6)) {
       forecastHtml =
         forecastHtml +
         `
          <div id="forecast-weather"><div>
+         <text class="weather-forecast-date">${formatDate(
+           day.time
+         )}</text>     <br /> <br />
           <strong class="weather-forecast-day">${formatDay(day.time)}</strong>
           <br />
-      
+          <em class="weather-forecast-condition">${
+            day.condition.description
+          }</em>
+          <br />
           <strong class="weather-forecast-temperature-max">${Math.round(
             day.temperature.maximum
           )}°C</strong>
@@ -33,8 +40,32 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHtml;
 }
 
+function formatDate(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let months = [
+    "JAN",
+    "FEB",
+    "MAR",
+    "APR",
+    "MAY",
+    "JUN",
+    "JUL",
+    "AUG",
+    "SEP",
+    "OCT",
+    "NOV",
+    "DEC",
+  ];
+
+  let month = months[date.getMonth()];
+  let noDate = date.getDate();
+
+  return `${month} ${noDate}`;
+}
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
+  console.log(timestamp);
   let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
   return days[date.getDay()];
 }
@@ -84,9 +115,6 @@ function refreshWeather(response) {
   let noDate = date.getDate();
   let fullYear = date.getFullYear();
   let hour = date.getHours();
-  if (hour < 10) {
-    hour = `0${hour}`;
-  }
   let minute = date.getMinutes();
 
   if (minute < 10) {
