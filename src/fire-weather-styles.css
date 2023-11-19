@@ -99,28 +99,20 @@ footer {
 }
 
 #forecast-weather {
-  padding: 2% 0% 0% 0%;
-}
-
-#forecast-weather ul {
   display: flex;
   justify-content: space-between;
-  list-style-type: none;
-  padding: 80px 50px 80px 50px;
-}
-
-#forecast-weather li {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  padding-left: 17px;
+  padding-right: 15px;
   text-align: center;
   font-weight: lighter;
-  padding-left: 5%;
-  padding-right: 2.5%;
 }
-
-#forecast-weather li strong {
+.weather-forecast-temperature-max {
   color: red;
 }
 
-#forecast-weather .next-day {
+.weather-forecast-day {
   color: white;
 }
 
@@ -216,20 +208,10 @@ footer {
   .current-details strong {
     color: RED;
   }
-
-  #forecast-weather ul {
+  #forecast-weather {
     display: flex;
     flex-direction: column;
-    padding: 10% 10%;
-    border-style: none;
-  }
-
-  #forecast-weather li {
-    list-style-type: none;
-    padding-top: 8%;
-  }
-
-  #forecast-weather li strong {
-    color: red;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
