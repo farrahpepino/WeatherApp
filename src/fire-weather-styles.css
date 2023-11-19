@@ -78,12 +78,12 @@ footer {
 }
 
 #current-temperature-value {
-  padding-top: 40%;
+  padding-top: 9%;
   font-size: 70px;
 }
 
 #current-temperature-unit {
-  padding-top: 44.5%;
+  padding-top: 9.5%;
 }
 
 #current-city {
