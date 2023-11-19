@@ -1,5 +1,5 @@
 function getForecast(city) {
-  let apiKey = "8f0ab40o57b12e2t3b934b3b4137cfbc";
+  let apiKey = "010at9ca97fd6359640c0357507fb1co";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayForecast);
@@ -16,6 +16,7 @@ function displayForecast(response) {
          <div id="forecast-weather"><div>
           <strong class="weather-forecast-day">${formatDay(day.time)}</strong>
           <br />
+      
           <strong class="weather-forecast-temperature-max">${Math.round(
             day.temperature.maximum
           )}°C</strong>
@@ -43,16 +44,20 @@ function refreshWeather(response) {
     "#current-temperature-value"
   );
   let currentTemperature = response.data.temperature.current;
+  let currentTemperatureUnitElement = document.querySelector(
+    "#current-temperature-unit"
+  );
+  currentTemperatureUnitElement.innerHTML = "°C";
 
   let currentCityElement = document.querySelector("#current-city");
   currentCityElement.innerHTML = response.data.city.toUpperCase();
   currentTemperatureElement.innerHTML = Math.round(currentTemperature);
 
   let currentHumidityElement = document.querySelector("#current-humidity");
-  currentHumidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  currentHumidityElement.innerHTML = `Humidity: ${response.data.temperature.humidity}%`;
 
   let currentWindElement = document.querySelector("#current-wind");
-  currentWindElement.innerHTML = `${response.data.wind.speed} m/s`;
+  currentWindElement.innerHTML = `, Wind: ${response.data.wind.speed} m/s`;
 
   let currentConditionElement = document.querySelector("#current-condition");
   currentConditionElement.innerHTML = response.data.condition.description;
@@ -108,7 +113,7 @@ function refreshWeather(response) {
 }
 
 function searchCity(city) {
-  let apiKey = "8f0ab40o57b12e2t3b934b3b4137cfbc";
+  let apiKey = "010at9ca97fd6359640c0357507fb1co";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(refreshWeather);
 }
@@ -121,3 +126,6 @@ function handleSearchSubmit(event) {
 
 let searchCityFormElement = document.querySelector("#search-city-form");
 searchCityFormElement.addEventListener("submit", handleSearchSubmit);
+
+searchCity("copenhagen");
+displayForecast();

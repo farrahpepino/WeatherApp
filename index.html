@@ -6,6 +6,7 @@
     <title>FIRE | Weather Today</title>
     <link rel="stylesheet" href="/src/fire-weather-styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="/src/fire-current-weather.js" async></script>
   </head>
 
   <body>
@@ -24,29 +25,27 @@
       <main>
         <div class="current-weather">
           <div class="info">
-            <h1 id="current-city">PARIS</h1>
+            <h1 id="current-city"></h1>
             <p class="current-details">
               <span class="current-date-time"
-                ><text id="current-date">APR 19 2022</text> <br /><text
+                ><text id="current-date"></text> <br /><text
                   id="current-day-time"
-                  >Saturday 15:32</text
-                ></span
-              >, <em id="current-condition">moderate rain</em> <br />
-              Humidity: <strong id="current-humidity">87%</strong>, Wind:
-              <strong id="current-wind">7.2 m/s</strong>
+                ></text></span
+              >, <em id="current-condition"></em> <br />
+              <strong id="current-humidity"></strong
+              ><strong id="current-wind"></strong>
             </p>
           </div>
           <div class="current-temperature">
-            <span id="current-temperature-value"><strong>24</strong></span
-            ><span id="current-temperature-unit">°C</span>
+            <span id="current-temperature-value"><strong></strong></span
+            ><span id="current-temperature-unit"></span>
           </div>
         </div>
-        <div id="forecast-weather"><div> </div></div>
+        <div id="forecast-weather"><div></div></div>
       </main>
     </section>
     <footer>
       <p>&copy FARRAH PEPINO 2023</p>
     </footer>
   </body>
-  <script src="/src/fire-current-weather.js"></script>
 </html>
