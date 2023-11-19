@@ -14,7 +14,7 @@ function displayForecast(response) {
       forecastHtml =
         forecastHtml +
         `
-         <div id="forecast-weather"><div>
+         < id="forecast-weather">
          <text class="weather-forecast-date">${formatDate(
            day.time
          )}</text>     <br /> <br />
@@ -30,7 +30,7 @@ function displayForecast(response) {
           <text class="weather-forecast-temperature-min">${Math.round(
             day.temperature.minimum
           )}°C</text>
-          </div>
+
         </div>
      `;
     }
