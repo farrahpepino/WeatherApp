@@ -155,5 +155,5 @@ function handleSearchSubmit(event) {
 let searchCityFormElement = document.querySelector("#search-city-form");
 searchCityFormElement.addEventListener("submit", handleSearchSubmit);
 
-searchCity("copenhagen");
+searchCity("Copenhagen");
 displayForecast();
