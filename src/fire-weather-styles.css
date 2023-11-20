@@ -59,7 +59,7 @@ footer {
 }
 
 .current-weather {
-  padding: 5% 5% 0% 5%;
+  padding: 5% 5% 7% 5%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -105,7 +105,7 @@ footer {
   justify-content: space-between;
   text-align: center;
   font-weight: lighter;
-  margin: 8% 0px 8% 0px;
+  margin: 7% 0px 7% 0px;
   padding: 1px 0px 1px 0px;
 }
 
@@ -113,8 +113,8 @@ footer {
   color: red;
 }
 
-#forecast-container hr {
-  color: hsla(0, 0%, 100%, 0.5);
+hr {
+  display: none;
 }
 
 .weather-forecast-day {
@@ -127,19 +127,18 @@ footer {
 @media (max-width: 1400px) {
   body {
     background-color: black;
-    margin: 4% 3%;
   }
 
   section {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
-    margin: 3% 3% 0% 3%;
+    margin: 3%;
+    padding: 6% 3%;
     border-radius: 24px;
     background-color: hsla(0, 0%, 50%, 0.5);
     color: white;
     border-style: solid;
-    padding: 5% 5% 0% 5%;
   }
 
   footer {
@@ -178,7 +177,6 @@ footer {
   }
 
   .current-weather {
-    padding: 5% 5% 5% 5%;
     display: block;
     align-items: center;
   }
@@ -188,7 +186,6 @@ footer {
   }
 
   .current-temperature {
-    padding-top: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -216,16 +213,19 @@ footer {
   .current-details strong {
     color: RED;
   }
-  #forecast-weather {
+  #forecast-container {
     display: flex;
     flex-direction: column;
     padding-top: 20px;
     padding-bottom: 15px;
+    border: none;
+    margin: 0.5% 0.5%;
   }
 
-  #forecast-container {
-    border: none;
-    margin-top: 0.5%;
-    margin-bottom: 10%;
+  hr {
+    display: flex;
+    color: hsla(0, 0%, 100%, 0.5);
+    width: 25%;
+    margin-bottom: 1%;
   }
 }
