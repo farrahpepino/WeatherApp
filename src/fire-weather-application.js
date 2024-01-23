@@ -153,5 +153,5 @@ function handleSearchSubmit(event) {
 let searchCityFormElement = document.querySelector("#search-city-form");
 searchCityFormElement.addEventListener("submit", handleSearchSubmit);
 
-searchCity("Jersey City");
+searchCity("New York City");
 displayForecast();
