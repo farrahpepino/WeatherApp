@@ -14,8 +14,7 @@ section {
   padding: 3% 5% 3% 5%;
   background-color: hsla(0, 0%, 50%, 0.5);
   color: white;
-  border-style: solid;
-  border-color: hsla(0, 0%, 100%, 0.5);
+  border: none;
 }
 
 footer {
@@ -40,6 +39,7 @@ footer {
   width: 75%;
   border-radius: 16.8px;
   transition-duration: 0.1s;
+  outline: none;
 }
 
 #submit-city {
@@ -124,6 +124,7 @@ hr {
 .weather-forecast-date {
   font-family: "Times New Roman", Times, serif;
 }
+
 @media (max-width: 1400px) {
   body {
     background-color: black;
@@ -138,7 +139,7 @@ hr {
     border-radius: 24px;
     background-color: hsla(0, 0%, 50%, 0.5);
     color: white;
-    border-style: solid;
+    border: none;
   }
 
   footer {

@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="/src/fire-weather-application.css" />
+    <link rel="stylesheet" href="/src/index.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <script src="/src/fire-weather-application.js" async></script>
+    <script src="/src/index.js" async></script>
   </head>
 
   <body>
@@ -26,15 +26,15 @@
         <div class="current-weather">
           <div class="info">
             <h1 id="current-city"></h1>
-            <p class="current-details">
-              <span class="current-date-time"
-                ><text id="current-date"></text> <br /><text
-                  id="current-day-time"
-                ></text></span
-              >, <em id="current-condition"></em> <br />
+            <div class="current-details">
+              <span class="current-date-time">
+              <div id="current-date"></div>
+              <span id="current-day-time"></span>,
+              </span>
+              <em id="current-condition"></em> <br />
               <strong id="current-humidity"></strong
               ><strong id="current-wind"></strong>
-            </p>
+            </div>
           </div>
           <div class="current-temperature">
             <span id="current-temperature-value"><strong></strong></span
@@ -44,13 +44,13 @@
         <hr />
         <div id="forecast-container">
           <div id="forecast-weather">
-            <text class="weather-forecast-date"></text> <br /><br />
+            <div class="weather-forecast-date"></div> <br /><br />
             <strong class="weather-forecast-day"></strong>
             <br />
             <em class="weather-forecast-condition"></em>
             <br />
             <strong class="weather-forecast-temperature-max"></strong>
-            <text class="weather-forecast-temperature-min"></text>
+            <div class="weather-forecast-temperature-min"></div>
           </div>
         </div>
         <hr />
